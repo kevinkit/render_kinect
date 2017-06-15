@@ -97,21 +97,23 @@ namespace render_kinect {
       }
 
       // store on disk
-      if (store_depth) {
+      if (true) {
 	std::stringstream lD;
 	lD << out_path_ << "depth_orig" << std::setw(3) << std::setfill('0')
 	   << countf << ".png";
 	convertScaleAbs(depth_im_, scaled_im_, 255.0f);
 	cv::imwrite(lD.str().c_str(), scaled_im_);
+        cv::imwrite("out.png",scaled_im_);
       }
 
       // store on disk
-      if (store_label) {
+      if (true) {
 	std::stringstream lD;
 	lD << out_path_ << "labels" << std::setw(3) << std::setfill('0')
 	   << countf << ".png";
 	cv::imwrite(lD.str().c_str(), labels_);
-      }
+ 	cv::imwrite("out2.png", labels_);   
+  }
 
       //convert point cloud to pcl/pcd format
       if (store_pcd) {
