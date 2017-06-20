@@ -32,10 +32,10 @@ if echo "$path" | grep -q "$SOURCEG"; then
 
 		if [ $pos_g -gt $pos_c ]; then
 			echo "LD_LIBRARY_PATH is set up correct"
-      mkdir build
-      cd build
-      cmake ..
-      make -j8
+		        mkdir build
+		        cd build
+			cmake ..
+			make -j8
     else
 			echo "Please change LD_LIBRARY_PATH so, that the conda is at the ending of the path"
 		fi
