@@ -7,7 +7,7 @@ sudo apt-get install gcc-multilib
 sudo apt-get install libboost-all-dev
 sudo apt-get install libwebp-dev
 
-conda remove libtiff
+#conda remove libtiff
 
 mkdir build
 cd build
